@@ -1,0 +1,470 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Controlling Emotion Strength with Relative Attribute for End-to-End Speech Synthesis</title>
+    <link rel="stylesheet" type="text/css" href="../../stylesheet.css"/>
+  </head>
+  <body>
+    <article>
+      <header>
+        <h1 align="center">Audio samples for "Controlling Emotion Strength with Relative Attribute for End-to-End Speech Synthesis"</h1>
+      </header>
+    </article>
+
+    <div><b>Authors:</b> Xiaolian Zhu, Shan Yang, Geng Yang, Lei Xie</div>
+    <div><b>Abstract:</b> Recently, attention-based end-to-end speech synthesis has achieved superior performance compared to traditional speech synthesis models, and several approaches like global
+style tokens are proposed to explore the style controllability of the end-to-end model. Although the existing methods show good performance in style disentanglement and transfer, it is still unable to control the explicit emotion of generated speech. In this paper, we mainly focus on the subtle control of
+expressive speech synthesis, where the emotion category and strength can be easily controlled with a discrete emotional vector and a continuous simple scalar, respectively. The continuous strength controller is learned by a ranking function according to the relative attribute measured on an emotion dataset. Our method automatically learns the relationship between low-level acoustic features and high-level subtle emotion strength. Experiments show that our method can effectively improve the controllability for an expressive end-to-end model.</div>
+	
+<!-- 	<div><p></p><font size="3" color="red">Note: These samples are synthesized from Mel-spectrum by Griffin-Lim algorithm. We just need to pay attention to prosody because this work has no relation with sound quality basically. </font></div> -->
+
+    <div>
+      <h3>1. Speech with different emotion strength synthesized from <font color="#FF0000">our proposed model</font> <p></p>(Left: Weak, Mid: Medium, Right: Strong)<p></p></h3>
+
+      <h4>1.1 "但要理解一个遥远的国家对她来说还太困难。" <p></p></h4>
+      <table>
+        <tr><td class="transcript">Surprise<p></p></td></tr>
+        <tr>
+          <td><audio controls><source src="audios_samples/1scalar/eval-200000-9-surprise-A.wav"></audio></td>
+          <td><audio controls><source src="audios_samples/1scalar/eval-200000-9-surprise-B.wav"></audio></td>
+          <td><audio controls><source src="audios_samples/1scalar/eval-200000-9-surprise-C.wav"></audio></td>
+        </tr>
+      </table>
+      <table>
+        <tr><td class="transcript">Happiness<p></p></td></tr>
+        <tr>
+          <td><audio controls><source src="audios_samples/1scalar/eval-200000-9-happy-A.wav"></audio></td>
+          <td><audio controls><source src="audios_samples/1scalar/eval-200000-9-happy-B.wav"></audio></td><td><audio controls><source src="audios_samples/1scalar/eval-200000-9-happy-C.wav"></audio></td>
+        </tr>
+      </table>
+      <table>
+        <tr><td class="transcript">Sadness<p></p></td></tr>
+        <tr>
+          <td><audio controls><source src="audios_samples/1scalar/eval-200000-9-sad-A.wav"></audio></td>
+          <td><audio controls><source src="audios_samples/1scalar/eval-200000-9-sad-B.wav"></audio></td>
+          <td><audio controls><source src="audios_samples/1scalar/eval-200000-9-sad-C.wav"></audio></td>
+        </tr>
+      </table>
+      <table>
+        <tr><td class="transcript">Anger<p></p></td></tr>
+        <tr>
+          <td><audio controls><source src="audios_samples/1scalar/eval-200000-9-angry-A.wav"></audio></td>
+          <td><audio controls><source src="audios_samples/1scalar/eval-200000-9-angry-B.wav"></audio></td>
+          <td><audio controls><source src="audios_samples/1scalar/eval-200000-9-angry-C.wav"></audio></td>
+        </tr>
+      </table>
+      <table>
+        <tr><td class="transcript">Disgust<p></p></td></tr>
+        <tr>
+          <td><audio controls><source src="audios_samples/1scalar/eval-200000-9-disgust-A.wav"></audio></td>
+          <td><audio controls><source src="audios_samples/1scalar/eval-200000-9-disgust-B.wav"></audio></td>
+          <td><audio controls><source src="audios_samples/1scalar/eval-200000-9-disgust-C.wav"></audio></td>
+        </tr>
+      </table>
+      <table>
+        <tr><td class="transcript">Fear<p></p></td></tr>
+        <tr>
+          <td><audio controls><source src="audios_samples/1scalar/eval-200000-9-fear-A.wav"></audio></td>
+          <td><audio controls><source src="audios_samples/1scalar/eval-200000-9-fear-B.wav"></audio></td>
+          <td><audio controls><source src="audios_samples/1scalar/eval-200000-9-fear-C.wav"></audio></td>
+        </tr>
+      </table>
+
+      <h4>1.2 "它叫嘎羧，负责饲养它的是波农丁。" <p></p></h4>
+      <table>
+        <tr><td class="transcript">Surprise<p></p></td></tr>
+        <tr>
+          <td><audio controls><source src="audios_samples/1scalar/eval-200000-5-surprise-A.wav"></audio></td>
+          <td><audio controls><source src="audios_samples/1scalar/eval-200000-5-surprise-B.wav"></audio></td>
+          <td><audio controls><source src="audios_samples/1scalar/eval-200000-5-surprise-C.wav"></audio></td>
+        </tr>
+      </table>
+      <table>
+        <tr><td class="transcript">Happiness<p></p></td></tr>
+        <tr>
+          <td><audio controls><source src="audios_samples/1scalar/eval-200000-5-happy-A.wav"></audio></td>
+          <td><audio controls><source src="audios_samples/1scalar/eval-200000-5-happy-B.wav"></audio></td><td><audio controls><source src="audios_samples/1scalar/eval-200000-5-happy-C.wav"></audio></td>
+        </tr>
+      </table>
+      <table>
+        <tr><td class="transcript">Sadness<p></p></td></tr>
+        <tr>
+          <td><audio controls><source src="audios_samples/1scalar/eval-200000-5-sad-A.wav"></audio></td>
+          <td><audio controls><source src="audios_samples/1scalar/eval-200000-5-sad-B.wav"></audio></td>
+          <td><audio controls><source src="audios_samples/1scalar/eval-200000-5-sad-C.wav"></audio></td>
+        </tr>
+      </table>
+      <table>
+        <tr><td class="transcript">Anger<p></p></td></tr>
+        <tr>
+          <td><audio controls><source src="audios_samples/1scalar/eval-200000-5-angry-A.wav"></audio></td>
+          <td><audio controls><source src="audios_samples/1scalar/eval-200000-5-angry-B.wav"></audio></td>
+          <td><audio controls><source src="audios_samples/1scalar/eval-200000-5-angry-C.wav"></audio></td>
+        </tr>
+      </table>
+      <table>
+        <tr><td class="transcript">Disgust<p></p></td></tr>
+        <tr>
+          <td><audio controls><source src="audios_samples/1scalar/eval-200000-5-disgust-A.wav"></audio></td>
+          <td><audio controls><source src="audios_samples/1scalar/eval-200000-5-disgust-B.wav"></audio></td>
+          <td><audio controls><source src="audios_samples/1scalar/eval-200000-5-disgust-C.wav"></audio></td>
+        </tr>
+      </table>
+      <table>
+        <tr><td class="transcript">Fear<p></p></td></tr>
+        <tr>
+          <td><audio controls><source src="audios_samples/1scalar/eval-200000-5-fear-A.wav"></audio></td>
+          <td><audio controls><source src="audios_samples/1scalar/eval-200000-5-fear-B.wav"></audio></td>
+          <td><audio controls><source src="audios_samples/1scalar/eval-200000-5-fear-C.wav"></audio></td>
+        </tr>
+      </table>
+
+      <h4>1.3 "企图将船掀翻，乘机从子羽手里夺璧。" <p></p></h4>
+      <table>
+        <tr><td class="transcript">Surprise<p></p></td></tr>
+        <tr>
+          <td><audio controls><source src="audios_samples/1scalar/eval-200000-17-surprise-A.wav"></audio></td>
+          <td><audio controls><source src="audios_samples/1scalar/eval-200000-17-surprise-B.wav"></audio></td>
+          <td><audio controls><source src="audios_samples/1scalar/eval-200000-17-surprise-C.wav"></audio></td>
+        </tr>
+      </table>
+      <table>
+        <tr><td class="transcript">Happiness<p></p></td></tr>
+        <tr>
+          <td><audio controls><source src="audios_samples/1scalar/eval-200000-17-happy-A.wav"></audio></td>
+          <td><audio controls><source src="audios_samples/1scalar/eval-200000-17-happy-B.wav"></audio></td><td><audio controls><source src="audios_samples/1scalar/eval-200000-17-happy-C.wav"></audio></td>
+        </tr>
+      </table>
+      <table>
+        <tr><td class="transcript">Sadness<p></p></td></tr>
+        <tr>
+          <td><audio controls><source src="audios_samples/1scalar/eval-200000-17-sad-A.wav"></audio></td>
+          <td><audio controls><source src="audios_samples/1scalar/eval-200000-17-sad-B.wav"></audio></td>
+          <td><audio controls><source src="audios_samples/1scalar/eval-200000-17-sad-C.wav"></audio></td>
+        </tr>
+      </table>
+      <table>
+        <tr><td class="transcript">Anger<p></p></td></tr>
+        <tr>
+          <td><audio controls><source src="audios_samples/1scalar/eval-200000-17-angry-A.wav"></audio></td>
+          <td><audio controls><source src="audios_samples/1scalar/eval-200000-17-angry-B.wav"></audio></td>
+          <td><audio controls><source src="audios_samples/1scalar/eval-200000-17-angry-C.wav"></audio></td>
+        </tr>
+      </table>
+      <table>
+        <tr><td class="transcript">Disgust<p></p></td></tr>
+        <tr>
+          <td><audio controls><source src="audios_samples/1scalar/eval-200000-17-disgust-A.wav"></audio></td>
+          <td><audio controls><source src="audios_samples/1scalar/eval-200000-17-disgust-B.wav"></audio></td>
+          <td><audio controls><source src="audios_samples/1scalar/eval-200000-17-disgust-C.wav"></audio></td>
+        </tr>
+      </table>
+      <table>
+        <tr><td class="transcript">Fear<p></p></td></tr>
+        <tr>
+          <td><audio controls><source src="audios_samples/1scalar/eval-200000-17-fear-A.wav"></audio></td>
+          <td><audio controls><source src="audios_samples/1scalar/eval-200000-17-fear-B.wav"></audio></td>
+          <td><audio controls><source src="audios_samples/1scalar/eval-200000-17-fear-C.wav"></audio></td>
+        </tr>
+      </table>
+
+      <h3>2. Speech with different emotion strength synthesized from <font color="#FF0000">GST-Tacotron2</font> <p></p>(Left: Weak, Mid: Medium, Right: Strong)<p></p></h3>
+      <h4>2.1 "但要理解一个遥远的国家对她来说还太困难。" <p></p></h4>
+      <table>
+        <tr><td class="transcript">Surprise<p></p></td></tr>
+        <tr>
+          <td><audio controls><source src="audios_samples/2gst/eval-110000-9-surprise-A_mel.wav"></audio></td>
+          <td><audio controls><source src="audios_samples/2gst/eval-110000-9-surprise-B_mel.wav"></audio></td>
+          <td><audio controls><source src="audios_samples/2gst/eval-110000-9-surprise-C_mel.wav"></audio></td>
+        </tr>
+      </table>
+      <table>
+        <tr><td class="transcript">Happiness<p></p></td></tr>
+        <tr>
+          <td><audio controls><source src="audios_samples/2gst/eval-110000-9-happy-A_mel.wav"></audio></td>
+          <td><audio controls><source src="audios_samples/2gst/eval-110000-9-happy-B_mel.wav"></audio></td><td><audio controls><source src="audios_samples/2gst/eval-110000-9-happy-C_mel.wav"></audio></td>
+        </tr>
+      </table>
+      <table>
+        <tr><td class="transcript">Sadness<p></p></td></tr>
+        <tr>
+          <td><audio controls><source src="audios_samples/2gst/eval-110000-9-sad-A_mel.wav"></audio></td>
+          <td><audio controls><source src="audios_samples/2gst/eval-110000-9-sad-B_mel.wav"></audio></td>
+          <td><audio controls><source src="audios_samples/2gst/eval-110000-9-sad-C_mel.wav"></audio></td>
+        </tr>
+      </table>
+      <table>
+        <tr><td class="transcript">Anger<p></p></td></tr>
+        <tr>
+          <td><audio controls><source src="audios_samples/2gst/eval-110000-9-angry-A_mel.wav"></audio></td>
+          <td><audio controls><source src="audios_samples/2gst/eval-110000-9-angry-B_mel.wav"></audio></td>
+          <td><audio controls><source src="audios_samples/2gst/eval-110000-9-angry-C_mel.wav"></audio></td>
+        </tr>
+      </table>
+      <table>
+        <tr><td class="transcript">Disgust<p></p></td></tr>
+        <tr>
+          <td><audio controls><source src="audios_samples/2gst/eval-110000-9-disgust-A_mel.wav"></audio></td>
+          <td><audio controls><source src="audios_samples/2gst/eval-110000-9-disgust-B_mel.wav"></audio></td>
+          <td><audio controls><source src="audios_samples/2gst/eval-110000-9-disgust-C_mel.wav"></audio></td>
+        </tr>
+      </table>
+      <table>
+        <tr><td class="transcript">Fear<p></p></td></tr>
+        <tr>
+          <td><audio controls><source src="audios_samples/2gst/eval-110000-9-fear-A_mel.wav"></audio></td>
+          <td><audio controls><source src="audios_samples/2gst/eval-110000-9-fear-B_mel.wav"></audio></td>
+          <td><audio controls><source src="audios_samples/2gst/eval-110000-9-fear-C_mel.wav"></audio></td>
+        </tr>
+      </table>
+
+      <h4>2.2 "它叫嘎羧，负责饲养它的是波农丁。" <p></p></h4>
+      <table>
+        <tr><td class="transcript">Surprise<p></p></td></tr>
+        <tr>
+          <td><audio controls><source src="audios_samples/2gst/eval-110000-5-surprise-A_mel.wav"></audio></td>
+          <td><audio controls><source src="audios_samples/2gst/eval-110000-5-surprise-B_mel.wav"></audio></td>
+          <td><audio controls><source src="audios_samples/2gst/eval-110000-5-surprise-C_mel.wav"></audio></td>
+        </tr>
+      </table>
+      <table>
+        <tr><td class="transcript">Happiness<p></p></td></tr>
+        <tr>
+          <td><audio controls><source src="audios_samples/2gst/eval-110000-5-happy-A_mel.wav"></audio></td>
+          <td><audio controls><source src="audios_samples/2gst/eval-110000-5-happy-B_mel.wav"></audio></td><td><audio controls><source src="audios_samples/2gst/eval-110000-5-happy-C_mel.wav"></audio></td>
+        </tr>
+      </table>
+      <table>
+        <tr><td class="transcript">Sadness<p></p></td></tr>
+        <tr>
+          <td><audio controls><source src="audios_samples/2gst/eval-110000-5-sad-A_mel.wav"></audio></td>
+          <td><audio controls><source src="audios_samples/2gst/eval-110000-5-sad-B_mel.wav"></audio></td>
+          <td><audio controls><source src="audios_samples/2gst/eval-110000-5-sad-C_mel.wav"></audio></td>
+        </tr>
+      </table>
+      <table>
+        <tr><td class="transcript">Anger<p></p></td></tr>
+        <tr>
+          <td><audio controls><source src="audios_samples/2gst/eval-110000-5-angry-A_mel.wav"></audio></td>
+          <td><audio controls><source src="audios_samples/2gst/eval-110000-5-angry-B_mel.wav"></audio></td>
+          <td><audio controls><source src="audios_samples/2gst/eval-110000-5-angry-C_mel.wav"></audio></td>
+        </tr>
+      </table>
+      <table>
+        <tr><td class="transcript">Disgust<p></p></td></tr>
+        <tr>
+          <td><audio controls><source src="audios_samples/2gst/eval-110000-5-disgust-A_mel.wav"></audio></td>
+          <td><audio controls><source src="audios_samples/2gst/eval-110000-5-disgust-B_mel.wav"></audio></td>
+          <td><audio controls><source src="audios_samples/2gst/eval-110000-5-disgust-C_mel.wav"></audio></td>
+        </tr>
+      </table>
+      <table>
+        <tr><td class="transcript">Fear<p></p></td></tr>
+        <tr>
+          <td><audio controls><source src="audios_samples/2gst/eval-110000-5-fear-A_mel.wav"></audio></td>
+          <td><audio controls><source src="audios_samples/2gst/eval-110000-5-fear-B_mel.wav"></audio></td>
+          <td><audio controls><source src="audios_samples/2gst/eval-110000-5-fear-C_mel.wav"></audio></td>
+        </tr>
+      </table>
+
+      <h4>2.3 "企图将船掀翻，乘机从子羽手里夺璧。" <p></p></h4>
+      <table>
+        <tr><td class="transcript">Surprise<p></p></td></tr>
+        <tr>
+          <td><audio controls><source src="audios_samples/2gst/eval-110000-17-surprise-A_mel.wav"></audio></td>
+          <td><audio controls><source src="audios_samples/2gst/eval-110000-17-surprise-B_mel.wav"></audio></td>
+          <td><audio controls><source src="audios_samples/2gst/eval-110000-17-surprise-C_mel.wav"></audio></td>
+        </tr>
+      </table>
+      <table>
+        <tr><td class="transcript">Happiness<p></p></td></tr>
+        <tr>
+          <td><audio controls><source src="audios_samples/2gst/eval-110000-17-happy-A_mel.wav"></audio></td>
+          <td><audio controls><source src="audios_samples/2gst/eval-110000-17-happy-B_mel.wav"></audio></td><td><audio controls><source src="audios_samples/2gst/eval-110000-17-happy-C_mel.wav"></audio></td>
+        </tr>
+      </table>
+      <table>
+        <tr><td class="transcript">Sadness<p></p></td></tr>
+        <tr>
+          <td><audio controls><source src="audios_samples/2gst/eval-110000-17-sad-A_mel.wav"></audio></td>
+          <td><audio controls><source src="audios_samples/2gst/eval-110000-17-sad-B_mel.wav"></audio></td>
+          <td><audio controls><source src="audios_samples/2gst/eval-110000-17-sad-C_mel.wav"></audio></td>
+        </tr>
+      </table>
+      <table>
+        <tr><td class="transcript">Anger<p></p></td></tr>
+        <tr>
+          <td><audio controls><source src="audios_samples/2gst/eval-110000-17-angry-A_mel.wav"></audio></td>
+          <td><audio controls><source src="audios_samples/2gst/eval-110000-17-angry-B_mel.wav"></audio></td>
+          <td><audio controls><source src="audios_samples/2gst/eval-110000-17-angry-C_mel.wav"></audio></td>
+        </tr>
+      </table>
+      <table>
+        <tr><td class="transcript">Disgust<p></p></td></tr>
+        <tr>
+          <td><audio controls><source src="audios_samples/2gst/eval-110000-17-disgust-A_mel.wav"></audio></td>
+          <td><audio controls><source src="audios_samples/2gst/eval-110000-17-disgust-B_mel.wav"></audio></td>
+          <td><audio controls><source src="audios_samples/2gst/eval-110000-17-disgust-C_mel.wav"></audio></td>
+        </tr>
+      </table>
+      <table>
+        <tr><td class="transcript">Fear<p></p></td></tr>
+        <tr>
+          <td><audio controls><source src="audios_samples/2gst/eval-110000-17-fear-A_mel.wav"></audio></td>
+          <td><audio controls><source src="audios_samples/2gst/eval-110000-17-fear-B_mel.wav"></audio></td>
+          <td><audio controls><source src="audios_samples/2gst/eval-110000-17-fear-C_mel.wav"></audio></td>
+        </tr>
+      </table>
+
+      <h3>3. Speech with different emotion strength synthesized from <font color="#FF0000">VAE model</font> <p></p>(Left: Weak, Mid: Medium, Right: Strong)<p></p></h3>
+
+      <h4>3.1 "但要理解一个遥远的国家对她来说还太困难。" <p></p></h4>
+      <table>
+        <tr><td class="transcript">Surprise<p></p></td></tr>
+        <tr>
+          <td><audio controls><source src="audios_samples/3vae/eval-200000-9-surprise-A.wav"></audio></td>
+          <td><audio controls><source src="audios_samples/3vae/eval-200000-9-surprise-B.wav"></audio></td>
+          <td><audio controls><source src="audios_samples/3vae/eval-200000-9-surprise-C.wav"></audio></td>
+        </tr>
+      </table>
+      <table>
+        <tr><td class="transcript">Happiness<p></p></td></tr>
+        <tr>
+          <td><audio controls><source src="audios_samples/3vae/eval-200000-9-happy-A.wav"></audio></td>
+          <td><audio controls><source src="audios_samples/3vae/eval-200000-9-happy-B.wav"></audio></td><td><audio controls><source src="audios_samples/3vae/eval-200000-9-happy-C.wav"></audio></td>
+        </tr>
+      </table>
+      <table>
+        <tr><td class="transcript">Sadness<p></p></td></tr>
+        <tr>
+          <td><audio controls><source src="audios_samples/3vae/eval-200000-9-sad-A.wav"></audio></td>
+          <td><audio controls><source src="audios_samples/3vae/eval-200000-9-sad-B.wav"></audio></td>
+          <td><audio controls><source src="audios_samples/3vae/eval-200000-9-sad-C.wav"></audio></td>
+        </tr>
+      </table>
+      <table>
+        <tr><td class="transcript">Anger<p></p></td></tr>
+        <tr>
+          <td><audio controls><source src="audios_samples/3vae/eval-200000-9-angry-A.wav"></audio></td>
+          <td><audio controls><source src="audios_samples/3vae/eval-200000-9-angry-B.wav"></audio></td>
+          <td><audio controls><source src="audios_samples/3vae/eval-200000-9-angry-C.wav"></audio></td>
+        </tr>
+      </table>
+      <table>
+        <tr><td class="transcript">Disgust<p></p></td></tr>
+        <tr>
+          <td><audio controls><source src="audios_samples/3vae/eval-200000-9-disgust-A.wav"></audio></td>
+          <td><audio controls><source src="audios_samples/3vae/eval-200000-9-disgust-B.wav"></audio></td>
+          <td><audio controls><source src="audios_samples/3vae/eval-200000-9-disgust-C.wav"></audio></td>
+        </tr>
+      </table>
+      <table>
+        <tr><td class="transcript">Fear<p></p></td></tr>
+        <tr>
+          <td><audio controls><source src="audios_samples/3vae/eval-200000-9-fear-A.wav"></audio></td>
+          <td><audio controls><source src="audios_samples/3vae/eval-200000-9-fear-B.wav"></audio></td>
+          <td><audio controls><source src="audios_samples/3vae/eval-200000-9-fear-C.wav"></audio></td>
+        </tr>
+      </table>
+
+      <h4>3.2 "它叫嘎羧，负责饲养它的是波农丁。" <p></p></h4>
+      <table>
+        <tr><td class="transcript">Surprise<p></p></td></tr>
+        <tr>
+          <td><audio controls><source src="audios_samples/3vae/eval-200000-5-surprise-A.wav"></audio></td>
+          <td><audio controls><source src="audios_samples/3vae/eval-200000-5-surprise-B.wav"></audio></td>
+          <td><audio controls><source src="audios_samples/3vae/eval-200000-5-surprise-C.wav"></audio></td>
+        </tr>
+      </table>
+      <table>
+        <tr><td class="transcript">Happiness<p></p></td></tr>
+        <tr>
+          <td><audio controls><source src="audios_samples/3vae/eval-200000-5-happy-A.wav"></audio></td>
+          <td><audio controls><source src="audios_samples/3vae/eval-200000-5-happy-B.wav"></audio></td><td><audio controls><source src="audios_samples/3vae/eval-200000-5-happy-C.wav"></audio></td>
+        </tr>
+      </table>
+      <table>
+        <tr><td class="transcript">Sadness<p></p></td></tr>
+        <tr>
+          <td><audio controls><source src="audios_samples/3vae/eval-200000-5-sad-A.wav"></audio></td>
+          <td><audio controls><source src="audios_samples/3vae/eval-200000-5-sad-B.wav"></audio></td>
+          <td><audio controls><source src="audios_samples/3vae/eval-200000-5-sad-C.wav"></audio></td>
+        </tr>
+      </table>
+      <table>
+        <tr><td class="transcript">Anger<p></p></td></tr>
+        <tr>
+          <td><audio controls><source src="audios_samples/3vae/eval-200000-5-angry-A.wav"></audio></td>
+          <td><audio controls><source src="audios_samples/3vae/eval-200000-5-angry-B.wav"></audio></td>
+          <td><audio controls><source src="audios_samples/3vae/eval-200000-5-angry-C.wav"></audio></td>
+        </tr>
+      </table>
+      <table>
+        <tr><td class="transcript">Disgust<p></p></td></tr>
+        <tr>
+          <td><audio controls><source src="audios_samples/3vae/eval-200000-5-disgust-A.wav"></audio></td>
+          <td><audio controls><source src="audios_samples/3vae/eval-200000-5-disgust-B.wav"></audio></td>
+          <td><audio controls><source src="audios_samples/3vae/eval-200000-5-disgust-C.wav"></audio></td>
+        </tr>
+      </table>
+      <table>
+        <tr><td class="transcript">Fear<p></p></td></tr>
+        <tr>
+          <td><audio controls><source src="audios_samples/3vae/eval-200000-5-fear-A.wav"></audio></td>
+          <td><audio controls><source src="audios_samples/3vae/eval-200000-5-fear-B.wav"></audio></td>
+          <td><audio controls><source src="audios_samples/3vae/eval-200000-5-fear-C.wav"></audio></td>
+        </tr>
+      </table>
+
+      <h4>3.3 "企图将船掀翻，乘机从子羽手里夺璧。" <p></p></h4>
+      <table>
+        <tr><td class="transcript">Surprise<p></p></td></tr>
+        <tr>
+          <td><audio controls><source src="audios_samples/3vae/eval-200000-17-surprise-A.wav"></audio></td>
+          <td><audio controls><source src="audios_samples/3vae/eval-200000-17-surprise-B.wav"></audio></td>
+          <td><audio controls><source src="audios_samples/3vae/eval-200000-17-surprise-C.wav"></audio></td>
+        </tr>
+      </table>
+      <table>
+        <tr><td class="transcript">Happiness<p></p></td></tr>
+        <tr>
+          <td><audio controls><source src="audios_samples/3vae/eval-200000-17-happy-A.wav"></audio></td>
+          <td><audio controls><source src="audios_samples/3vae/eval-200000-17-happy-B.wav"></audio></td><td><audio controls><source src="audios_samples/3vae/eval-200000-17-happy-C.wav"></audio></td>
+        </tr>
+      </table>
+      <table>
+        <tr><td class="transcript">Sadness<p></p></td></tr>
+        <tr>
+          <td><audio controls><source src="audios_samples/3vae/eval-200000-17-sad-A.wav"></audio></td>
+          <td><audio controls><source src="audios_samples/3vae/eval-200000-17-sad-B.wav"></audio></td>
+          <td><audio controls><source src="audios_samples/3vae/eval-200000-17-sad-C.wav"></audio></td>
+        </tr>
+      </table>
+      <table>
+        <tr><td class="transcript">Anger<p></p></td></tr>
+        <tr>
+          <td><audio controls><source src="audios_samples/3vae/eval-200000-17-angry-A.wav"></audio></td>
+          <td><audio controls><source src="audios_samples/3vae/eval-200000-17-angry-B.wav"></audio></td>
+          <td><audio controls><source src="audios_samples/3vae/eval-200000-17-angry-C.wav"></audio></td>
+        </tr>
+      </table>
+      <table>
+        <tr><td class="transcript">Disgust<p></p></td></tr>
+        <tr>
+          <td><audio controls><source src="audios_samples/3vae/eval-200000-17-disgust-A.wav"></audio></td>
+          <td><audio controls><source src="audios_samples/3vae/eval-200000-17-disgust-B.wav"></audio></td>
+          <td><audio controls><source src="audios_samples/3vae/eval-200000-17-disgust-C.wav"></audio></td>
+        </tr>
+      </table>
+      <table>
+        <tr><td class="transcript">Fear<p></p></td></tr>
+        <tr>
+          <td><audio controls><source src="audios_samples/3vae/eval-200000-17-fear-A.wav"></audio></td>
+          <td><audio controls><source src="audios_samples/3vae/eval-200000-17-fear-B.wav"></audio></td>
+          <td><audio controls><source src="audios_samples/3vae/eval-200000-17-fear-C.wav"></audio></td>
+        </tr>
+      </table>
+
+    </div>
+  </body>
+</html>
